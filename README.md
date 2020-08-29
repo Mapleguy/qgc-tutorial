@@ -1,3 +1,7 @@
+# Modifying QGroundControl Series
+
+Repository to match my ongoing series of tutorials of modifying QGroundControl. Playlist can be found [here](https://www.youtube.com/playlist?list=PLkSeuhQd36nHmniZLph7iO82ejgxiDJYU).
+
 # QGroundControl Ground Control Station
 
 [![Releases](https://img.shields.io/github/release/mavlink/QGroundControl.svg)](https://github.com/mavlink/QGroundControl/releases)
