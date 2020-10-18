@@ -19,6 +19,8 @@ import QGroundControl.MultiVehicleManager   1.0
 import QGroundControl.ScreenTools           1.0
 import QGroundControl.Controllers           1.0
 
+import Tutorial 1.0
+
 Item {
     id: toolBar
 
@@ -192,7 +194,7 @@ Item {
                     icon.source:        "/qmlimages/TutButton.png"
                     visible:            true
                     onClicked: {
-                        buttonRow.clearAllChecks()
+                        TutorialPlugin.qmlDebug("Make sure to subsribe")
                     }
                 }
 

@@ -23,6 +23,8 @@
 #include <QtQml>
 #include <QQmlEngine>
 
+#include "Tutorial/tutorialplugin.h"
+
 /// @file
 ///     @brief Core Plugin Interface for QGroundControl - Default Implementation
 ///     @author Gus Grubba <gus@auterion.com>
@@ -406,7 +408,9 @@ QQmlApplicationEngine* QGCCorePlugin::createRootWindow(QObject *parent)
     pEngine->addImportPath("qrc:/qml");
     pEngine->rootContext()->setContextProperty("joystickManager", qgcApp()->toolbox()->joystickManager());
     pEngine->rootContext()->setContextProperty("debugMessageModel", AppMessages::getModel());
+    pEngine->rootContext()->setContextProperty("TutorialPlugin", qgcApp()->toolbox()->tutorialPlugin());
     pEngine->load(QUrl(QStringLiteral("qrc:/qml/MainRootWindow.qml")));
+
     return pEngine;
 }
 

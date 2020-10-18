@@ -44,6 +44,8 @@ class TaisyncManager;
 class MicrohardManager;
 #endif
 
+class TutorialPlugin;
+
 /// This is used to manage all of our top level services/tools
 class QGCToolbox : public QObject {
     Q_OBJECT
@@ -69,6 +71,7 @@ public:
     SettingsManager*            settingsManager         () { return _settingsManager; }
     AirspaceManager*            airspaceManager         () { return _airspaceManager; }
     ADSBVehicleManager*         adsbVehicleManager      () { return _adsbVehicleManager; }
+    TutorialPlugin*             tutorialPlugin          () { return _tutorialPlugin; }
 #if defined(QGC_ENABLE_PAIRING)
     PairingManager*             pairingManager          () { return _pairingManager; }
 #endif
@@ -109,6 +112,7 @@ private:
     SettingsManager*            _settingsManager        = nullptr;
     AirspaceManager*            _airspaceManager        = nullptr;
     ADSBVehicleManager*         _adsbVehicleManager     = nullptr;
+    TutorialPlugin*             _tutorialPlugin         = nullptr;
 #if defined(QGC_ENABLE_PAIRING)
     PairingManager*             _pairingManager         = nullptr;
 #endif

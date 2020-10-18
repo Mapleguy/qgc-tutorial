@@ -50,6 +50,8 @@
 #include CUSTOMHEADER
 #endif
 
+#include "Tutorial/tutorialplugin.h"
+
 QGCToolbox::QGCToolbox(QGCApplication* app)
 {
     // SettingsManager must be first so settings are available to any subsequent tools
@@ -75,6 +77,7 @@ QGCToolbox::QGCToolbox(QGCApplication* app)
     _videoManager           = new VideoManager              (app, this);
     _mavlinkLogManager      = new MAVLinkLogManager         (app, this);
     _adsbVehicleManager     = new ADSBVehicleManager        (app, this);
+    _tutorialPlugin         = new TutorialPlugin            (app, this);
 #if defined(QGC_ENABLE_PAIRING)
     _pairingManager         = new PairingManager            (app, this);
 #endif
@@ -119,6 +122,7 @@ void QGCToolbox::setChildToolboxes(void)
     _mavlinkLogManager->setToolbox(this);
     _airspaceManager->setToolbox(this);
     _adsbVehicleManager->setToolbox(this);
+    _tutorialPlugin->setToolbox(this);
 #if defined(QGC_GST_TAISYNC_ENABLED)
     _taisyncManager->setToolbox(this);
 #endif
