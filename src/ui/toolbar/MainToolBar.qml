@@ -186,6 +186,16 @@ Item {
                     }
                 }
 
+                QGCToolBarButton {
+                    id:                 tutButton
+                    Layout.fillHeight:  true
+                    icon.source:        "/qmlimages/TutButton.png"
+                    visible:            true
+                    onClicked: {
+                        buttonRow.clearAllChecks()
+                    }
+                }
+
                 Item {
                     Layout.fillHeight:  true
                     width:              ScreenTools.defaultFontPixelWidth / 2
